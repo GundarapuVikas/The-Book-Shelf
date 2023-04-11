@@ -1,0 +1,43 @@
+.book-detail-container{
+    display:flex;
+    flex-direction: row;
+    padding:20px;
+    gap: 50px;
+    margin-top:90px;
+}
+.book-detail-img-container{
+    width: 20%;
+}
+.book-detail-img-container img{
+    margin-top:10px;
+    width:100%;
+}
+.book-detail-prop-container{
+    
+    width:70%;
+}
+
+.book-detail-prop-container>*{
+    margin-bottom:20px;
+}
+
+.book-description{
+    border:1px solid darkgray;
+    background-color: lightgray;
+    padding:10px;
+    text-justify: auto;
+    margin-top:30px
+}
+
+.book-button{
+    display: flex;
+    justify-content: space-between;
+    width:30%;
+}
+
+.book-button button{
+    padding:2px 20px;
+    background-color: rosybrown;
+    color: white;
+    border:none;
+}

@@ -1,0 +1,59 @@
+/* reset css */
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root{
+  --background-color:white;
+  --primary-text-color:black;
+  --card-bg-color:aliceblue;
+}
+
+body{
+  background-color: var(--background-color);
+  color:var(--primary-text-color);
+  overflow-x: hidden;
+}
+
+button{
+  cursor: pointer;
+}
+
+.App-header{
+  background-color: white;
+  padding: 20px 32px;
+  margin:0px 0px 0px 0px;
+  display: flex;
+  border-bottom: 2px solid black;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.app-title{
+  font-size: larger;
+}
+
+
+nav a:not(:last-child){
+  padding:0px 20px;
+  border-right: 2px solid black;
+}
+nav a:last-child{
+  padding:0px 20px
+}
+
+.titlebar{
+  display:flex;
+  gap:10px;
+}
+
+.titlebar img{
+  width:50px;
+  height:35px;
+}
+

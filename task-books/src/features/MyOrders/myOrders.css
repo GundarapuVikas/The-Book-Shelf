@@ -1,0 +1,47 @@
+.myorders-container{
+    margin-top:90px;
+}
+
+.noorders-container{
+    border: 2px solid gray;
+    margin:120px 30px 0px 30px;
+     padding: 15rem;
+}
+
+.noorders-container>h1{
+    text-align: center;
+}
+
+.order-item-container{
+    margin:20px 37px 20px 30px;
+    display:flex;
+    flex-direction: column;
+    border:2px solid gray;
+}
+.status-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 10px;
+    background-color: rgb(211, 177, 177);
+}
+
+.status-container>*{
+    padding: 0px 10px;
+}
+
+.order-details{
+    display:flex;
+    padding:10px 20px;
+    gap:50px;
+    height:10rem;
+}
+
+.order-book>*{
+    margin:10px;
+}
+
+.order-img img{
+    height:100%;
+}
+
