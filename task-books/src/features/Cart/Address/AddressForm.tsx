@@ -1,16 +1,14 @@
 import {Field,formValues,reduxForm} from 'redux-form'
 import { useAppDispatch,useAppSelector } from '../../../app/hooks';
-import { resetAddress, saveAddress } from './CartAddressSlice';
+import { AddressType, resetAddress, saveAddress } from './CartAddressSlice';
 
 const AddressForm = (props: any) => {
-    console.log(props);
     const {handleSubmit}=props
     const dispatch = useAppDispatch();
-    var address=useAppSelector(state=>state.address)
-    console.warn(address)
+    var address=useAppSelector((state: { address: AddressType; })=>state.address)
   return (
     <div className="address-form">
-          <form id='my-address-form'   onSubmit={handleSubmit((formValues: any)=>{
+          <form id='my-address-form'   onSubmit={handleSubmit((formValues: AddressType)=>{
             if(Object.keys(formValues).length==5){
                 dispatch(saveAddress(formValues));
             }

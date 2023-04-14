@@ -3,12 +3,12 @@ import './home.css'
 import BookItem from '../BookItem/BookItem'
 import { useAppDispatch,useAppSelector } from '../../app/hooks'
 import { resetTitle } from '../Navbar/TitleSlice'
-import { getBooksRequest } from './HomePageSlice'
+import { getBooksRequest, InitialState } from './HomePageSlice'
 
 const Home = () => {
-    const books=useAppSelector((state)=>state.homeBook)
+    const books=useAppSelector((state: { homeBook: InitialState })=>state.homeBook)
     const dispatch=useAppDispatch()
-    useEffect(()=>{
+    useEffect(()=>{ 
         dispatch(getBooksRequest())
     },[])
     dispatch(resetTitle())
@@ -19,7 +19,7 @@ const Home = () => {
       {!books.loading && books.data.length?(
         <>
           {
-                books.data.map((bookItem)=>(
+                books.data.map((bookItem: JSX.IntrinsicAttributes & { [x: string]: any })=>(
                   <BookItem key={bookItem.id} {...bookItem}/>
                 ))
             }

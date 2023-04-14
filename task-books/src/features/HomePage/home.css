@@ -33,8 +33,11 @@
   
   
   .book-item-button{
-    padding:0 15px;
+    padding:0px 15px;
     bottom:0;
+  }
+  .book-item-button-min{
+    display: none;
   }
   
   .cart-count{
@@ -43,4 +46,39 @@
     color: white;
     margin:0px 5px;
     padding:0px 5px;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 768px) {
+
+    .home-container{
+      justify-content:space-evenly;
+      /* justify-content: flex-start; */
+      /* margin: 100px 20px 30px 10px; */
+    }
+
+    .book-container{
+      width:6rem;
+      margin:20px 5px;
+      cursor: pointer;
+      padding-bottom: 0px;
+    }
+
+    .book-img-container{
+      width: 100%;
+      height:8rem;
+    }
+
+    .book-item-details{
+      margin:0px;
+      padding:0px;
+    }
+    .book-item-rating,.book-item-title,.book-item-button{
+      display: none;
+    }
+    .book-item-button-min{
+      display: block;
+      padding:0px 15px;
+      bottom:0;
+      width: 100%;
+    }
   }

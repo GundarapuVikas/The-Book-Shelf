@@ -41,7 +41,38 @@
     margin:10px;
 }
 
+.order-book>h2{
+    display:block;
+}
+
+.order-book>h4{
+    display:none;
+}
+
 .order-img img{
     height:100%;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px){
+    .noorders-container{
+        border: 2px solid gray;
+        margin:220px 10px 0px 10px;
+        padding: 5rem; 
+    }
+    .order-item-container{
+        margin:20px 5px;
+    }
+    .order{
+        display: none;
+    }
+    .status{
+        display: none;
+    }
+    .order-book>h2{
+        display: none;
+    }
+    .order-book>h4{
+        display: block;
+    }
 }
 

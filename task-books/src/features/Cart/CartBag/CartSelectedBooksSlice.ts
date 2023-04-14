@@ -17,7 +17,6 @@ const cartItemsSlice=createSlice({
     reducers:{
         addToCart:(state:InitialState,action:PayloadAction<BookType>)=>{
             state.cartItems.push(action.payload);
-            // alert('Added to cart');
         },
         clearCart:(state:InitialState)=>{
             state.cartItems.length=0;

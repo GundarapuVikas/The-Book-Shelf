@@ -1,9 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import BookDetails from '../BookDetails/BookDetails'
-
 
 const BookItem = ({...bookItem}) => {
-    const navigate=useNavigate()
+    const navigate=useNavigate() 
     let path="book-details/";
     path=path+bookItem.id;
   return (
@@ -20,6 +18,7 @@ const BookItem = ({...bookItem}) => {
             </div>
             <div>
                 <button className="book-item-button" onClick={()=>navigate(path)}>more details</button>
+                <button className="book-item-button-min" onClick={()=>navigate(path)}>details</button>
             </div>
         </div>
     </div>

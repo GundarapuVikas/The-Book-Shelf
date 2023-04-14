@@ -86,3 +86,27 @@ button{
     margin:0;
 }
 
+@media only screen and (min-width: 0px) and (max-width: 768px){
+    .cart-container{
+        flex-direction: column;
+    }
+    .address-container{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .billing-container{
+        width: 100%;
+    }
+    .payment-container{
+        width: 100%;
+    }
+    .payment-container > table{
+        width: 100%;
+    }
+    .payment-buttons{
+        width: 100%;
+    }
+    .address-container .address-buttons{
+        width: 100%;
+    }
+}

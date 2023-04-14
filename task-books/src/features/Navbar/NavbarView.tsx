@@ -1,5 +1,6 @@
 import {NavLink} from 'react-router-dom'
 import { useAppSelector } from '../../app/hooks'
+import { BookType } from '../HomePage/HomePageSlice'
 
 const NavbarView = () => {
     const navLinkStyles=({isActive}: { isActive: boolean }):object=>{
@@ -8,7 +9,7 @@ const NavbarView = () => {
             textDecoration: isActive?'none':'underline'
         }
     }
-    const cartItems=useAppSelector(state=>state.cartItem.cartItems)
+    const cartItems=useAppSelector((state: { cartItem: { cartItems: BookType[] } })=>state.cartItem.cartItems)
   return (
     <div>
       <nav className='primary-nav'>

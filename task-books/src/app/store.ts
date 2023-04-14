@@ -9,8 +9,8 @@ import myOrdersReducer from '../features/MyOrders/myOrdersSlice'
 import { reducer as formReducer } from 'redux-form'
 import addressReducer from '../features/Cart/Address/CartAddressSlice'
 
-import { createLogger } from 'redux-logger'
-const logger=createLogger()
+// import { createLogger } from 'redux-logger'
+// const logger=createLogger()
 
 import rootSaga from './root-sagas'
 import createSagaMiddleware from 'redux-saga'
@@ -28,7 +28,7 @@ const store=configureStore({
         form:formReducer,
         address:addressReducer,
     },
-    middleware:[sagaMiddleware,logger]
+    middleware:[sagaMiddleware]
 })
 sagaMiddleware.run(rootSaga);
 

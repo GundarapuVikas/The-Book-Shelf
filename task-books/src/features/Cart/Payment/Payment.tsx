@@ -1,7 +1,8 @@
 import {useAppSelector } from '../../../app/hooks'
+import { billType } from './CartBillSlice'
 
 const Payment = () => {
-    const cart_bill=useAppSelector(state=>state.cartBill)
+    const cart_bill=useAppSelector((state: { cartBill: billType })=>state.cartBill)
   return (
     <div className="payment-bill">
             <table border={0} cellPadding={15} cellSpacing={15} className='bill'>

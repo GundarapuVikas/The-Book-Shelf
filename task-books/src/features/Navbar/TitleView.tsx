@@ -4,7 +4,7 @@ import { useAppDispatch,useAppSelector } from '../../app/hooks'
 
 
 const TitleView = () => {
-    const title=useAppSelector(state=>state.title.title)
+    const title=useAppSelector((state: { title: { title: string } })=>state.title.title)
   if (title) {
     return (
         <div className="titlebar">

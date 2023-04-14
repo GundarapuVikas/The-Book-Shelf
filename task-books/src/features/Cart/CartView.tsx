@@ -12,12 +12,10 @@ import Payment from './Payment/Payment'
 const CartView = () => {
   const dispatch=useAppDispatch()
   dispatch(updateTitle("Cart"))
-  const cartItems=useAppSelector(state=>state.cartItem.cartItems)
+  const cartItems=useAppSelector((state: { cartItem: { cartItems: any } })=>state.cartItem.cartItems)
   
-  const address=useAppSelector(state=>state.address)
-  console.log("address: ",address)
-  console.log(cartItems)
-  
+  const address=useAppSelector((state: { address: any })=>state.address)
+
   return (
     <div className='cart-container'>
       <div className="address-container">

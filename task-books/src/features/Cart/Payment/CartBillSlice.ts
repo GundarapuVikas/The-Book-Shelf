@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-type billType={
+export type billType={
     total_price:number,
     tax:number,
     shipping_charge:number,

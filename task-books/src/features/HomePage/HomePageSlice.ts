@@ -15,7 +15,7 @@ export type BookType={
     price:number
 }
 
-type InitialState={
+export type InitialState={
     loading:boolean,
     data:BookType[],
     error:string
